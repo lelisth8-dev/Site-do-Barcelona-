@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d1c;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 85px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0c1429;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    background: linear-gradient(135deg, #bd153c, #153c87);
+    padding: 12px;
+    font-weight: 900;
+    clip-path: polygon(0 0, 100% 0, 90% 80%, 50% 100%, 10% 80%);
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.logo h2 span,
+footer h2 span {
+    color: #e32d51;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c5cbd8;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e32d51;
+}
+
+.header-button {
+    text-decoration: none;
+    background: #b51b3d;
+    color: white;
+    padding: 13px 22px;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 4px;
+}
+
+/* BANNER */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background:
+        radial-gradient(circle at 75% 50%, #18366b, transparent 40%),
+        linear-gradient(120deg, #080d1c, #101d3c);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 520px;
+    z-index: 1;
+}
+
+.collection {
+    color: #e7bd4d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: 900;
+    line-height: 1.08;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #df3153;
+}
+
+.hero p {
+    color: #aebbd0;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 390px;
+    margin-bottom: 28px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #bd1c42;
+    padding: 16px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 900;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.main-button:hover {
+    background: #e32d51;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 42%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px #0009);
+}
+
+/* CATEGORIAS */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    background: #101c35;
+}
+
+.categories a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 13px 30px;
+    border: 1px solid #ffffff25;
+    transition: .3s;
+}
+
+.categories a:hover {
+    background: #b51b3d;
+    border-color: #b51b3d;
+}
+
+/* PRODUTOS */
+
+.products {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #e7bd4d;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.section-title p {
+    font-size: 12px;
+    color: #9baac2;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #111d37;
+    border: 1px solid #ffffff12;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: #b51b3d;
+    box-shadow: 0 15px 30px #0005;
+}
+
+.product-image {
+    height: 330px;
+    position: relative;
+    background: #f1f1ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .4s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #b51b3d;
+    color: white;
+    padding: 7px 12px;
+    font-size: 9px;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info small {
+    color: #e7bd4d;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.product-info h3 {
+    font-size: 14px;
+    margin: 12px 0;
+    min-height: 34px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    display: block;
+    text-align: center;
+    background: #182c50;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    font-size: 10px;
+    font-weight: 900;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.buy-button:hover {
+    background: #b51b3d;
+}
+
+/* SOBRE */
+
+.about {
+    margin: 30px 8% 90px;
+    padding: 55px;
+    background: linear-gradient(120deg, #14284c, #1c1934);
+    border: 1px solid #ffffff15;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-radius: 8px;
+}
+
+.about-logo {
+    width: 120px;
+    height: 140px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #b51b3d 50%, #173c80 50%);
+    clip-path: polygon(0 0, 100% 0, 90% 80%, 50% 100%, 10% 80%);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.about div:last-child > span {
+    color: #e7bd4d;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.about p {
+    color: #b1bfd4;
+    font-size: 12px;
+    line-height: 2;
+    max-width: 600px;
+}
+
+.about h3 {
+    font-size: 11px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.about h3 span {
+    color: #e7bd4d;
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #050a15;
+    border-top: 1px solid #ffffff15;
+}
+
+footer h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aab7cb;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+footer small {
+    color: #718099;
+    font-size: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        height: 75px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .header-button {
+        padding: 11px 15px;
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 650px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 55px 7% 20px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 310px;
+        align-self: center;
+    }
+
+    .categories {
+        gap: 7px;
+        padding: 20px 8px;
+    }
+
+    .categories a {
+        padding: 12px;
+        font-size: 9px;
+    }
+
+    .products {
+        padding: 65px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 13px;
+    }
+
+    .product-info h3 {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .buy-button {
+        padding: 11px 5px;
+        font-size: 9px;
+    }
+
+    .about {
+        margin: 15px 5% 60px;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+}
